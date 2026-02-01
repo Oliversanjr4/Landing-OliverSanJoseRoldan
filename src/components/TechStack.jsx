@@ -27,10 +27,10 @@ const TechStack = () => {
                     className="text-center mb-16"
                 >
                     <h2 className="text-4xl md:text-5xl font-bold font-['Outfit'] mb-4">
-                        Tech <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-music to-accent-cyan">Arsenal</span>
+                        Arsenal <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-music to-accent-cyan">Tecnológico</span>
                     </h2>
                     <p className="text-gray-400 max-w-xl mx-auto">
-                        A curated set of tools and languages I use to bring ideas to life.
+                        Conjunto seleccionado de herramientas y lenguajes que utilizo para dar vida a las ideas.
                     </p>
                 </motion.div>
 

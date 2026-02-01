@@ -51,11 +51,11 @@ const Contact = () => {
                     viewport={{ once: true }}
                 >
                     <h2 className="text-4xl md:text-5xl font-bold font-['Outfit'] mb-6">
-                        Let's start a <br />
-                        <span className="text-gradient">Conversation</span>
+                        Empecemos una <br />
+                        <span className="text-gradient">conversación</span>
                     </h2>
                     <p className="text-gray-400 text-lg mb-12 max-w-md">
-                        Have a project in mind or want to discuss the latest tech? I'm always open to new opportunities and challenges.
+                        ¿Tienes un proyecto en mente o quieres hablar sobre tecnología? Estoy abierto a nuevas oportunidades y retos.
                     </p>
 
                     <div className="space-y-8">
@@ -64,26 +64,38 @@ const Contact = () => {
                                 <FaEnvelope />
                             </div>
                             <div>
-                                <h4 className="text-white font-semibold">Email</h4>
-                                <a href="mailto:oliversanjr@gmail.com" className="text-gray-400 hover:text-white transition-colors">oliversanjr@gmail.com</a>
+                                <h4 className="text-white font-semibold">Correo electrónico</h4>
+                                <a
+                                    href="mailto:oliversanjr@gmail.com"
+                                    className="text-gray-400 hover:text-white transition-colors"
+                                >
+                                    oliversanjr@gmail.com
+                                </a>
                             </div>
                         </div>
+
                         <div className="flex items-center gap-5">
                             <div className="p-4 rounded-full bg-white/5 text-primary text-xl shadow-inner shadow-white/5">
                                 <FaPhone />
                             </div>
                             <div>
-                                <h4 className="text-white font-semibold">Phone</h4>
-                                <a href="tel:+34689519776" className="text-gray-400 hover:text-white transition-colors">+34 689 519 776</a>
+                                <h4 className="text-white font-semibold">Teléfono</h4>
+                                <a
+                                    href="tel:+34689519776"
+                                    className="text-gray-400 hover:text-white transition-colors"
+                                >
+                                    +34 689 519 776
+                                </a>
                             </div>
                         </div>
+
                         <div className="flex items-center gap-5">
                             <div className="p-4 rounded-full bg-white/5 text-primary text-xl shadow-inner shadow-white/5">
                                 <FaMapMarkerAlt />
                             </div>
                             <div>
-                                <h4 className="text-white font-semibold">Location</h4>
-                                <span className="text-gray-400">Madrid, Spain</span>
+                                <h4 className="text-white font-semibold">Ubicación</h4>
+                                <span className="text-gray-400">Madrid, España</span>
                             </div>
                         </div>
                     </div>
@@ -98,7 +110,9 @@ const Contact = () => {
                 >
                     <form onSubmit={handleSubmit} className="space-y-6">
                         <div>
-                            <label className="block text-sm font-medium text-gray-400 mb-2">Email</label>
+                            <label className="block text-sm font-medium text-gray-400 mb-2">
+                                Correo electrónico
+                            </label>
                             <input
                                 type="email"
                                 name="email"
@@ -106,11 +120,14 @@ const Contact = () => {
                                 value={formData.email}
                                 onChange={handleChange}
                                 className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors placeholder:text-gray-600"
-                                placeholder="john@example.com"
+                                placeholder="nombre@ejemplo.com"
                             />
                         </div>
+
                         <div>
-                            <label className="block text-sm font-medium text-gray-400 mb-2">Subject</label>
+                            <label className="block text-sm font-medium text-gray-400 mb-2">
+                                Asunto
+                            </label>
                             <input
                                 type="text"
                                 name="subject"
@@ -118,11 +135,14 @@ const Contact = () => {
                                 value={formData.subject}
                                 onChange={handleChange}
                                 className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors placeholder:text-gray-600"
-                                placeholder="Project Idea / Greeting"
+                                placeholder="Idea de proyecto / Saludo"
                             />
                         </div>
+
                         <div>
-                            <label className="block text-sm font-medium text-gray-400 mb-2">Message</label>
+                            <label className="block text-sm font-medium text-gray-400 mb-2">
+                                Mensaje
+                            </label>
                             <textarea
                                 name="message"
                                 required
@@ -130,7 +150,7 @@ const Contact = () => {
                                 value={formData.message}
                                 onChange={handleChange}
                                 className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors placeholder:text-gray-600 resize-none"
-                                placeholder="Tell me about your project..."
+                                placeholder="Cuéntame sobre tu proyecto..."
                             />
                         </div>
 
@@ -142,13 +162,17 @@ const Contact = () => {
                             {status === 'submitting' ? (
                                 <span className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
                             ) : status === 'success' ? (
-                                <>Sent Successfully <FaCheckCircle /></>
+                                <>Enviado correctamente <FaCheckCircle /></>
                             ) : (
-                                <>Send Message <FaPaperPlane /></>
+                                <>Enviar mensaje <FaPaperPlane /></>
                             )}
                         </button>
 
-                        {status === 'error' && <p className="text-red-500 text-center mt-2">Something went wrong. Please try again.</p>}
+                        {status === 'error' && (
+                            <p className="text-red-500 text-center mt-2">
+                                Algo ha salido mal. Por favor, inténtalo de nuevo.
+                            </p>
+                        )}
                     </form>
                 </motion.div>
             </div>

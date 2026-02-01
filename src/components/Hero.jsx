@@ -1,4 +1,4 @@
-import React, { useRef, useMemo } from 'react';
+import React, { useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Float, Environment, MeshDistortMaterial, ContactShadows, OrbitControls } from '@react-three/drei';
 import { motion } from 'framer-motion';
@@ -48,8 +48,8 @@ const ExperienceShape = () => {
                 />
             </mesh>
         </Float>
-    )
-}
+    );
+};
 
 const Hero = () => {
     return (
@@ -93,7 +93,7 @@ const Hero = () => {
                             Oliver
                             <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 animate-pulse-glow">
-                                San José
+                                San José Roldán
                             </span>
                         </h1>
                     </motion.div>
@@ -104,9 +104,9 @@ const Hero = () => {
                         transition={{ duration: 1, delay: 0.6 }}
                     >
                         <p className="text-lg md:text-xl text-gray-400 max-w-lg mb-8 leading-relaxed">
-                            Creative Software Developer specializing in building premium digital experiences.
-                            Merging <span className="text-white font-semibold">Technical Mastery</span> with
-                            <span className="text-white font-semibold"> Artistic Vision</span>.
+                            Desarrollador de software creativo, especializado en crear experiencias digitales premium.
+                            Fusionando <span className="text-white font-semibold">dominio técnico</span> con
+                            <span className="text-white font-semibold"> visión artística</span>.
                         </p>
                     </motion.div>
 
@@ -116,18 +116,26 @@ const Hero = () => {
                         transition={{ duration: 0.5, delay: 0.8 }}
                         className="flex gap-4"
                     >
-                        <a href="#projects" className="group relative px-8 py-3 bg-white text-black font-semibold rounded-full overflow-hidden transition-all hover:scale-105 active:scale-95">
-                            <span className="relative z-10 flex items-center gap-2">View Work <FaArrowDown className="group-hover:translate-y-1 transition-transform" /></span>
+                        <a
+                            href="#projects"
+                            className="group relative px-8 py-3 bg-white text-black font-semibold rounded-full overflow-hidden transition-all hover:scale-105 active:scale-95"
+                        >
+                            <span className="relative z-10 flex items-center gap-2">
+                                Ver proyectos <FaArrowDown className="group-hover:translate-y-1 transition-transform" />
+                            </span>
                             <div className="absolute inset-0 bg-gradient-to-r from-primary-glow to-accent-magenta opacity-0 group-hover:opacity-20 transition-opacity" />
                         </a>
-                        <a href="#contact" className="px-8 py-3 border border-white/20 text-white rounded-full font-semibold hover:bg-white/10 transition-colors">
-                            Contact Me
+
+                        <a
+                            href="#contact"
+                            className="px-8 py-3 border border-white/20 text-white rounded-full font-semibold hover:bg-white/10 transition-colors"
+                        >
+                            Contactar
                         </a>
                     </motion.div>
                 </div>
 
-                {/* Right side is intentionally empty for the 3D element on desktop, 
-                on mobile the 3D element is behind everything */}
+                {/* Right side intentionally empty on desktop */}
                 <div className="hidden lg:block"></div>
             </div>
 
@@ -138,7 +146,9 @@ const Hero = () => {
                 transition={{ delay: 1.5, duration: 1 }}
                 className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
             >
-                <span className="text-[10px] uppercase tracking-[0.2em] text-gray-500">Scroll</span>
+                <span className="text-[10px] uppercase tracking-[0.2em] text-gray-500">
+                    Desplázate
+                </span>
                 <div className="w-[1px] h-12 bg-gradient-to-b from-primary to-transparent"></div>
             </motion.div>
         </section>

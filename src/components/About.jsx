@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaGraduationCap, FaCode, FaLaptopCode } from 'react-icons/fa';
+import { FaGraduationCap, FaCode } from 'react-icons/fa';
 
 const About = () => {
     // Reveal animation variants
@@ -32,19 +32,21 @@ const About = () => {
                     variants={staggerContainer}
                     className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center"
                 >
-                    {/* Left Column: Image/Visual or Large Text */}
+                    {/* Left Column */}
                     <motion.div variants={fadeInUp} className="relative">
                         <div className="relative z-10 p-8 glass-panel rounded-2xl transform rotate-1 hover:rotate-0 transition-transform duration-500">
-                            <h3 className="text-8xl font-bold text-white/5 absolute -top-10 -left-10 z-0">ABOUT</h3>
+                            <h3 className="text-8xl font-bold text-white/5 absolute -top-10 -left-10 z-0">
+                                SOBRE MÍ
+                            </h3>
                             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                                Building digital <span className="text-gradient">masterpieces</span>
+                                Creando <span className="text-gradient">experiencias digitales</span>
                             </h2>
                             <p className="text-gray-400 leading-relaxed mb-6 text-lg">
-                                I'm <span className="text-white font-semibold">Oliver San José Roldán</span>, a 20-year-old software engineer in the making.
-                                Currently studying Software Engineering at UPM, I blend academic rigor with creative exploration.
+                                Soy <span className="text-white font-semibold">Oliver San José Roldán</span>, un futuro ingeniero de software de 20 años.
+                                Actualmente estudio Ingeniería del Software en la UPM, combinando rigor académico con exploración creativa.
                             </p>
                             <p className="text-gray-400 leading-relaxed text-lg">
-                                My journey started with a curiosity for how things work, evolving into a passion for architecting complex systems and crafting beautiful user interfaces.
+                                Mi camino comenzó con la curiosidad por entender cómo funcionan las cosas, evolucionando hacia una pasión por diseñar sistemas complejos y crear interfaces de usuario atractivas.
                             </p>
                         </div>
 
@@ -52,7 +54,7 @@ const About = () => {
                         <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-accent-magenta/20 rounded-full blur-3xl" />
                     </motion.div>
 
-                    {/* Right Column: Cards/Stats */}
+                    {/* Right Column */}
                     <motion.div variants={staggerContainer} className="grid grid-cols-1 gap-6">
                         {/* Education Card */}
                         <motion.div variants={fadeInUp} className="glass-panel p-6 rounded-xl hover:bg-white/5 transition-colors cursor-default border-l-4 border-primary">
@@ -61,14 +63,22 @@ const About = () => {
                                     <FaGraduationCap />
                                 </div>
                                 <div>
-                                    <h4 className="text-xl font-bold text-white">Education</h4>
+                                    <h4 className="text-xl font-bold text-white">Formación</h4>
                                     <p className="text-gray-300 mt-2">
-                                        <span className="block font-semibold">Higher Technician in Multi-platform App Development</span>
-                                        <span className="text-sm text-gray-500">IES Luis Braille (2025)</span>
+                                        <span className="block font-semibold">
+                                            Técnico Superior en Desarrollo de Aplicaciones Multiplataforma
+                                        </span>
+                                        <span className="text-sm text-gray-500">
+                                            IES Luis Braille (2025)
+                                        </span>
                                     </p>
                                     <p className="text-gray-300 mt-2">
-                                        <span className="block font-semibold">Software Engineering</span>
-                                        <span className="text-sm text-gray-500">Universidad Politécnica de Madrid (Current)</span>
+                                        <span className="block font-semibold">
+                                            Ingeniería del Software
+                                        </span>
+                                        <span className="text-sm text-gray-500">
+                                            Universidad Politécnica de Madrid (Actualidad)
+                                        </span>
                                     </p>
                                 </div>
                             </div>
@@ -81,9 +91,9 @@ const About = () => {
                                     <FaCode />
                                 </div>
                                 <div>
-                                    <h4 className="text-xl font-bold text-white">Focus</h4>
+                                    <h4 className="text-xl font-bold text-white">Enfoque</h4>
                                     <p className="text-gray-400 mt-2">
-                                        Full-stack development with a strong emphasis on clean architecture, performance, and engaging creative frontends.
+                                        Desarrollo full-stack con un fuerte énfasis en arquitectura limpia, rendimiento y frontends creativos y atractivos.
                                     </p>
                                 </div>
                             </div>

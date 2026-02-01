@@ -15,10 +15,10 @@ const Navbar = () => {
     }, []);
 
     const navLinks = [
-        { name: 'About', href: '#about' },
+        { name: 'Sobre mí', href: '#about' },
         { name: 'Stack', href: '#tech' },
-        { name: 'Work', href: '#experience' },
-        { name: 'Contact', href: '#contact' },
+        { name: 'Experiencia', href: '#experience' },
+        { name: 'Contacto', href: '#contact' },
     ];
 
     return (
@@ -33,7 +33,7 @@ const Navbar = () => {
         >
             <div className="max-w-7xl mx-auto flex justify-between items-center">
                 <a href="#" className="text-xl font-bold font-['Outfit'] tracking-tighter hover:text-primary transition-colors">
-                    OLIVER<span className="text-primary">.DEV</span>
+                    OLIVER<span className="text-primary">.SJR</span>
                 </a>
 
                 {/* Desktop Nav */}

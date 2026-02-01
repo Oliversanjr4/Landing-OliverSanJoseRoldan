@@ -6,23 +6,23 @@ const Experience = () => {
     const projects = [
         {
             title: "EvolveHub",
-            role: "Digital Transformation Project",
-            desc: "A comprehensive project focused on the digitization and digital transformation of SMEs (Small and Medium-sized Enterprises). Aimed at modernizing business processes through technology.",
-            tech: ["React", "Node.js", "System Design"],
+            role: "Proyecto de Transformación Digital",
+            desc: "Proyecto integral centrado en la digitalización y transformación digital de PYMES (Pequeñas y Medianas Empresas), con el objetivo de modernizar los procesos de negocio mediante el uso de la tecnología.",
+            tech: ["React", "Node.js", "Diseño de Sistemas"],
             link: "https://evolvehub.es",
             color: "from-blue-600 to-cyan-500",
             icon: <FaRocket />,
-            status: "In Process"
+            status: "En desarrollo"
         },
         {
             title: "Desafío Emprendedor Innovador",
-            role: "EOI Course",
-            desc: "Specialized training by the Escuela de Organización Industrial (EOI) focused on innovative entrepreneurship in Madrid. Developing skills to turn technical solutions into viable business models.",
-            tech: ["Entrepreneurship", "Innovation", "Business Model"],
+            role: "Curso EOI",
+            desc: "Formación especializada impartida por la Escuela de Organización Industrial (EOI), centrada en el emprendimiento innovador en Madrid. Desarrollo de habilidades para transformar soluciones técnicas en modelos de negocio viables.",
+            tech: ["Emprendimiento", "Innovación", "Modelo de Negocio"],
             link: "#",
             color: "from-purple-600 to-pink-500",
             icon: <FaLightbulb />,
-            status: "Completed"
+            status: "Completado"
         }
     ];
 
@@ -39,7 +39,7 @@ const Experience = () => {
                     className="mb-16"
                 >
                     <h2 className="text-4xl md:text-5xl font-bold font-['Outfit'] mb-4">
-                        Experience & <span className="text-gradient">Projects</span>
+                        Experiencia y <span className="text-gradient">Proyectos</span>
                     </h2>
                 </motion.div>
 
@@ -62,21 +62,33 @@ const Experience = () => {
                                         <span className="text-2xl text-white">{project.icon}</span>
                                     </div>
                                     {project.link !== '#' && (
-                                        <a href={project.link} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full border border-white/10 hover:bg-white/10 transition-colors text-white/50 hover:text-white">
+                                        <a
+                                            href={project.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="p-2 rounded-full border border-white/10 hover:bg-white/10 transition-colors text-white/50 hover:text-white"
+                                        >
                                             <FaExternalLinkAlt />
                                         </a>
                                     )}
                                 </div>
 
-                                <h3 className="text-2xl font-bold text-white mb-2">{project.title}</h3>
-                                <p className="text-primary text-sm font-semibold tracking-wide uppercase mb-4">{project.role}</p>
+                                <h3 className="text-2xl font-bold text-white mb-2">
+                                    {project.title}
+                                </h3>
+                                <p className="text-primary text-sm font-semibold tracking-wide uppercase mb-4">
+                                    {project.role}
+                                </p>
                                 <p className="text-gray-400 leading-relaxed mb-6 flex-grow">
                                     {project.desc}
                                 </p>
 
                                 <div className="flex flex-wrap gap-2 mt-auto">
                                     {project.tech.map((t, i) => (
-                                        <span key={i} className="px-3 py-1 rounded-full bg-white/5 border border-white/5 text-xs text-gray-300">
+                                        <span
+                                            key={i}
+                                            className="px-3 py-1 rounded-full bg-white/5 border border-white/5 text-xs text-gray-300"
+                                        >
                                             {t}
                                         </span>
                                     ))}
