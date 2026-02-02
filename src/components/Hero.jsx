@@ -104,9 +104,7 @@ const Hero = () => {
                         transition={{ duration: 1, delay: 0.6 }}
                     >
                         <p className="text-lg md:text-xl text-gray-400 max-w-lg mb-8 leading-relaxed">
-                            Desarrollador de software creativo, especializado en crear experiencias digitales premium.
-                            Fusionando <span className="text-white font-semibold">dominio técnico</span> con
-                            <span className="text-white font-semibold"> visión artística</span>.
+                            <span className="text-white font-semibold">Desarrollador de software</span>, especializado en <span className="text-white font-semibold">aplicaciones multiplataforma</span>, con mentalidad emprendedora y enfoque en <span className="text-white font-semibold">nuevas tecnologías e inteligencia artificial</span>.
                         </p>
                     </motion.div>
 
@@ -117,7 +115,7 @@ const Hero = () => {
                         className="flex gap-4"
                     >
                         <a
-                            href="#projects"
+                            href="#experience"
                             className="group relative px-8 py-3 bg-white text-black font-semibold rounded-full overflow-hidden transition-all hover:scale-105 active:scale-95"
                         >
                             <span className="relative z-10 flex items-center gap-2">

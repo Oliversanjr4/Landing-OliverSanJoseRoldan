@@ -42,12 +42,15 @@ const About = () => {
                                 Creando <span className="text-gradient">experiencias digitales</span>
                             </h2>
                             <p className="text-gray-400 leading-relaxed mb-6 text-lg">
-                                Soy <span className="text-white font-semibold">Oliver San José Roldán</span>, un futuro ingeniero de software de 20 años.
-                                Actualmente estudio Ingeniería del Software en la UPM, combinando rigor académico con exploración creativa.
+                               Soy una persona inquieta y autodidacta, con una fuerte orientación a la mejora continua y al aprendizaje constante. Me gusta entender cómo funcionan las cosas en profundidad y aplicar ese conocimiento para crear soluciones prácticas y bien pensadas.
                             </p>
                             <p className="text-gray-400 leading-relaxed text-lg">
-                                Mi camino comenzó con la curiosidad por entender cómo funcionan las cosas, evolucionando hacia una pasión por diseñar sistemas complejos y crear interfaces de usuario atractivas.
+                                Disfruto enfrentándome a nuevos retos técnicos, investigando por mi cuenta y manteniéndome al día en un sector que evoluciona muy rápido. Especialmente, me interesa el impacto que pueden tener la inteligencia artificial y la automatización en la optimización de procesos y en la creación de productos digitales más inteligentes.
+
                             </p>
+                            <p className="text-gray-400 leading-relaxed text-lg">Además del desarrollo técnico, me atrae la parte estratégica de los proyectos: analizar necesidades reales, plantear soluciones escalables y pensar en cómo la tecnología puede aportar valor más allá del código. Esta visión me ha llevado a impulsar iniciativas propias relacionadas con la digitalización y la transformación digital.</p>
+                             <p className="text-gray-400 leading-relaxed text-lg">Me considero una persona responsable, proactiva y con capacidad de adaptación, cómoda tanto trabajando de forma individual como en equipo, y siempre con ganas de seguir creciendo profesionalmente.</p>
+
                         </div>
 
                         {/* Decorative circle */}
@@ -93,8 +96,10 @@ const About = () => {
                                 <div>
                                     <h4 className="text-xl font-bold text-white">Enfoque</h4>
                                     <p className="text-gray-400 mt-2">
-                                        Desarrollo full-stack con un fuerte énfasis en arquitectura limpia, rendimiento y frontends creativos y atractivos.
+                                        Desarrollo de software sólido y bien estructurado, con especial interés en la aplicación de la inteligencia artificial y la automatización a proyectos reales.
                                     </p>
+                                    <p className="text-gray-400 mt-2">Busco seguir creciendo como ingeniero, profundizando en buenas prácticas, arquitectura y calidad de software, sin perder de vista la innovación y la evolución constante de la tecnología.</p>
+                                    <p className="text-gray-400 mt-2">A largo plazo, mi objetivo es participar en proyectos tecnológicos con impacto real y continuar desarrollando iniciativas propias, combinando el perfil técnico con una visión emprendedora y orientada a negocio.</p>
                                 </div>
                             </div>
                         </motion.div>
