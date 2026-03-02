@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Float, Environment, MeshDistortMaterial, ContactShadows, OrbitControls } from '@react-three/drei';
 import { motion } from 'framer-motion';
@@ -48,8 +48,8 @@ const ExperienceShape = () => {
                 />
             </mesh>
         </Float>
-    );
-};
+    )
+}
 
 const Hero = () => {
     return (
@@ -89,11 +89,26 @@ const Hero = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 1, delay: 0.4 }}
                     >
-                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-['Outfit'] leading-tight text-white mb-6">
-                            Oliver
-                            <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 animate-pulse-glow">
-                                San José Roldán
+                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-['Outfit'] leading-tight text-white mb-6 flex flex-col">
+                            <span className="flex items-center gap-4 md:gap-6">
+                                <motion.div
+                                    initial={{ scale: 0, rotate: -15 }}
+                                    animate={{ scale: 1, rotate: 0 }}
+                                    transition={{ duration: 0.8, delay: 0.6, type: "spring", bounce: 0.4 }}
+                                    className="relative flex-shrink-0 group"
+                                >
+                                    {/* Glowing background behind image */}
+                                    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary to-accent-magenta blur-md opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                    <img
+                                        src="/profile.png"
+                                        alt="Oliver San José"
+                                        className="relative w-16 h-16 md:w-24 md:h-24 lg:w-28 lg:h-28 rounded-full object-cover object-top border-2 border-white/20 z-10"
+                                    />
+                                </motion.div>
+                                <span>Oliver</span>
+                            </span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 animate-pulse-glow mt-2 md:mt-0">
+                                San José
                             </span>
                         </h1>
                     </motion.div>
@@ -104,7 +119,9 @@ const Hero = () => {
                         transition={{ duration: 1, delay: 0.6 }}
                     >
                         <p className="text-lg md:text-xl text-gray-400 max-w-lg mb-8 leading-relaxed">
-                            <span className="text-white font-semibold">Desarrollador de software</span>, especializado en <span className="text-white font-semibold">aplicaciones multiplataforma</span>, con mentalidad emprendedora y enfoque en <span className="text-white font-semibold">nuevas tecnologías e inteligencia artificial</span>.
+                            Creative Software Developer specializing in building premium digital experiences.
+                            Merging <span className="text-white font-semibold">Technical Mastery</span> with
+                            <span className="text-white font-semibold"> Artistic Vision</span>.
                         </p>
                     </motion.div>
 
@@ -114,26 +131,18 @@ const Hero = () => {
                         transition={{ duration: 0.5, delay: 0.8 }}
                         className="flex gap-4"
                     >
-                        <a
-                            href="#experience"
-                            className="group relative px-8 py-3 bg-white text-black font-semibold rounded-full overflow-hidden transition-all hover:scale-105 active:scale-95"
-                        >
-                            <span className="relative z-10 flex items-center gap-2">
-                                Ver proyectos <FaArrowDown className="group-hover:translate-y-1 transition-transform" />
-                            </span>
+                        <a href="#projects" className="group relative px-8 py-3 bg-white text-black font-semibold rounded-full overflow-hidden transition-all hover:scale-105 active:scale-95">
+                            <span className="relative z-10 flex items-center gap-2">View Work <FaArrowDown className="group-hover:translate-y-1 transition-transform" /></span>
                             <div className="absolute inset-0 bg-gradient-to-r from-primary-glow to-accent-magenta opacity-0 group-hover:opacity-20 transition-opacity" />
                         </a>
-
-                        <a
-                            href="#contact"
-                            className="px-8 py-3 border border-white/20 text-white rounded-full font-semibold hover:bg-white/10 transition-colors"
-                        >
-                            Contactar
+                        <a href="#contact" className="px-8 py-3 border border-white/20 text-white rounded-full font-semibold hover:bg-white/10 transition-colors">
+                            Contact Me
                         </a>
                     </motion.div>
                 </div>
 
-                {/* Right side intentionally empty on desktop */}
+                {/* Right side is intentionally empty for the 3D element on desktop, 
+                on mobile the 3D element is behind everything */}
                 <div className="hidden lg:block"></div>
             </div>
 
@@ -144,9 +153,7 @@ const Hero = () => {
                 transition={{ delay: 1.5, duration: 1 }}
                 className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
             >
-                <span className="text-[10px] uppercase tracking-[0.2em] text-gray-500">
-                    Desplázate
-                </span>
+                <span className="text-[10px] uppercase tracking-[0.2em] text-gray-500">Scroll</span>
                 <div className="w-[1px] h-12 bg-gradient-to-b from-primary to-transparent"></div>
             </motion.div>
         </section>
